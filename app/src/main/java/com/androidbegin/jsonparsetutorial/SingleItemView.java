@@ -1,0 +1,44 @@
+package com.androidbegin.jsonparsetutorial;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class SingleItemView extends Activity {
+	// Declare Variables
+	String rank;
+	String country;
+	String population;
+	String position;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// Get the view from singleitemview.xml
+		setContentView(R.layout.singleitemview);
+
+		Intent i = getIntent();
+		// Get the result of rank
+		rank = i.getStringExtra("rank");
+		// Get the result of country
+		country = i.getStringExtra("country");
+		// Get the result of population
+		population = i.getStringExtra("population");
+
+
+		// Locate the TextViews in singleitemview.xml
+		TextView txtrank = (TextView) findViewById(R.id.rank);
+		TextView txtcountry = (TextView) findViewById(R.id.country);
+		TextView txtpopulation = (TextView) findViewById(R.id.population);
+
+
+		// Set results to the TextViews
+		txtrank.setText(rank);
+		txtcountry.setText(country);
+		txtpopulation.setText(population);
+
+
+	}
+}
