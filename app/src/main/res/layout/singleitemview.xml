@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/flag_simple"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        fresco:placeholderImage="@drawable/temp_img" />
 
     <TextView
         android:id="@+id/ranklabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ranklabel" />
+        android:layout_above="@+id/flag_simple"
+        android:layout_alignParentLeft="true"
+        android:text="ID: " />
 
     <TextView
         android:id="@+id/rank"
@@ -20,8 +29,9 @@
         android:id="@+id/countrylabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ranklabel"
-        android:text="@string/countrylabel" />
+        android:layout_above="@+id/ranklabel"
+        android:layout_alignParentLeft="true"
+        android:text="UserName: " />
 
     <TextView
         android:id="@+id/country"
@@ -34,8 +44,11 @@
         android:id="@+id/populationlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/countrylabel"
-        android:text="@string/populationlabel" />
+        android:layout_above="@+id/countrylabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/countrylabel"
+        android:text="Name: " />
 
     <TextView
         android:id="@+id/population"
@@ -43,7 +56,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/country"
         android:layout_toRightOf="@+id/populationlabel" />
-    
 
 
 </RelativeLayout>

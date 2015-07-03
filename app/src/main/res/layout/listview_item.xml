@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent">
 
     <TextView
         android:id="@+id/ranklabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ranklabel" />
+        android:text="ID: " />
 
     <TextView
         android:id="@+id/rank"
@@ -20,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ranklabel"
-        android:text="@string/countrylabel" />
+        android:text="UserName: " />
 
     <TextView
         android:id="@+id/country"
@@ -34,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/countrylabel"
-        android:text="@string/populationlabel" />
+        android:text="Name: " />
 
     <TextView
         android:id="@+id/population"
@@ -42,6 +43,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/country"
         android:layout_toRightOf="@+id/populationlabel" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/flag"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        fresco:placeholderImage="@drawable/temp_img" />
 
 
 </RelativeLayout>
